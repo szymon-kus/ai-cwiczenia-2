@@ -52,3 +52,55 @@ Funkcja `main`:
 - Wizualizacja jest dostosowana do dwuwymiarowego zbioru danych.
 
 - Skrypt używa zbioru danych Iris w celach demonstracyjnych. 
+
+----------------------------------------
+
+Dokumentacja dla pliku Cwiczenia 2 regresja liniowa.py
+
+1. Wprowadzenie
+
+Podany skrypt w języku Python implementuje klasyfikator regresji logistycznej wieloklasowej. Wykorzystuje on klasyfikator binarny regresji logistycznej do każdej klasy. Skrypt używa bibliotek NumPy, matplotlib, scikit-learn i mlxtend.
+
+2. Klasy
+
+2.1. Klasa Regresji Logistycznej (LogisticRegressionGD)
+
+Atrybuty:
+  - `eta` (float): Współczynnik uczenia.
+  - `n_iter` (int): Liczba iteracji treningowych.
+  - `random_state` (int): Ziarno generatora liczb losowych.
+
+Metody:
+  - `fit(X, y)`: Dopasuj model regresji logistycznej do danych treningowych.
+  - `net_input(X)`: Oblicz wejście sieci.
+  - `activation(z)`: Oblicz funkcję aktywacji.
+  - `predict(X)`: Przewiduj etykiety klas.
+
+2.2. Klasa MultiClassLogisticRegression
+
+Atrybuty:
+  - `eta` (float): Współczynnik uczenia.
+  - `n_iter` (int): Liczba iteracji treningowych.
+  - `random_state` (int): Ziarno generatora liczb losowych.
+  - `classifiers` (lista): Lista zawierająca klasyfikatory dla każdej klasy.
+
+Metody:
+  - `fit(X, y)`: Dopasuj model regresji logistycznej wieloklasowej do danych treningowych.
+  - `predict(X)`: Przewiduj etykiety klas.
+
+3. Główne Funkcje
+
+- Ładuje zbiór danych Iris, wydobywa cechy (`X`) i etykiety (`y`).
+- Dzieli dane na zbiór treningowy i testowy.
+- Standaryzuje dane treningowe i testowe.
+- Tworzy instancję klasyfikatora `MultiClassLogisticRegression` i trenuje go na danych treningowych.
+- Dokonuje predykcji na danych testowych i oblicza dokładność klasyfikacji.
+- Wizualizuje obszary decyzyjne oraz prawdziwe etykiety klas.
+
+4. Uwagi
+
+- Klasyfikator binarny regresji logistycznej jest używany dla każdej klasy w celu implementacji klasyfikatora wieloklasowego.
+
+- Wizualizacja obszarów decyzyjnych jest dostosowana do dwuwymiarowego zbioru danych.
+
+- Skrypt korzysta z zestawu danych Iris w celach demonstracyjnych. 
